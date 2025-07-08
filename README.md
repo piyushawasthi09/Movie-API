@@ -10,7 +10,6 @@ A beautiful and responsive React app to browse, search, and manage your favorite
 - 🔍 Search movies by name
 - ❤️ Add/remove favorites (stored in localStorage)
 - 📄 Movie details page
-- 🌓 Light/Dark theme (if implemented)
 - ⚙️ Built with React functional components + Hooks + Context API
 
 ---
