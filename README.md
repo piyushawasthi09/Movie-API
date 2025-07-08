@@ -16,10 +16,10 @@ A beautiful and responsive React app to browse, search, and manage your favorite
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** React (Vite or CRA)
+- **Frontend:** React Vite 
 - **State Management:** React Context API
-- **Styling:** CSS Modules Styled Components *(adjust as needed)*
-- **Icons:** React Icons / FontAwesome *(optional)*
+- **Styling:** CSS Modules Styled Components
+- **Icons:** React Icons 
 - **Data Source:** [The Movie Database (TMDB) API](https://www.themoviedb.org/) or any mock API
 
 ---
