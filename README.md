@@ -1,6 +1,6 @@
 # 🎬 React Movies App
 
-A beautiful and responsive React app to browse, search, and manage your favorite movies. Built using modern React practices like hooks and context, this app fetches movie data and provides an interactive UI for movie lovers.
+A Responsive React app to browse, search, and manage your favorite movies. Built using modern React practices like hooks and context, this app fetches movie data and provides an interactive UI for movie lovers.
 
 ---
 
