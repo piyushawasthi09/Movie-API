@@ -1,40 +1,35 @@
 import { createContext, useContext, useEffect, useState } from "react";
 
-export const MovieContext = createContext()
-export const useMovieContext = () =>  useContext(MovieContext)
+export const MovieContext = createContext();
+export const useMovieContext = () => useContext(MovieContext);
 
+export const MovieProvider = ({ pass }) => {
+  const [favorate, setFavourate] = useState([]); // paper
 
-export const MovieProvider = ({pass}) => {
+  useEffect(() => {
+    const storedFav = localStorage.getItem("favorate");
+    if (storedFav) setFavourate(JSON.parse(storedFav));
+  }, []);
 
-    const[favorate,setFavourate] = useState([])
+  useEffect(() => {
+    localStorage.setItem("favorate", JSON.stringify(favorate));
+  }, [favorate]);
 
-    useEffect(()=>{
-        const storedFav = localStorage.getItem("favorate")
-        if(storedFav) setFavourate(JSON.parse(storedFav))
-    },[])
+  const addFavorate = (movie) => {
+    setFavourate((prev) => [...prev, movie]);
+  };
 
-    useEffect(()=>{
-        localStorage.setItem('favorate',JSON.stringify(favorate))
-    },[favorate])
+  const removeFavorate = (movieId) => {
+    setFavourate((prev) => prev.filter((movie) => movie.id !== movieId));
+  };
 
-    const addFavorate = (movie) => {
-        setFavourate(prev=> [...prev , movie ])
-    }
+  const isFavourate = (movieId) => {
+    return favorate.some((movie) => movie.id === movieId);
+  };
 
-    const removeFavorate = (movieId) => {
-        setFavourate(prev => prev.filter(movie => movie.id !== movieId))
-
-    }
-
-    const isFavourate = (movieId) => {
-        return favorate.some(movie => movie.id === movieId)
-    }
-
-    const value = {
-        favorate,setFavourate
-    }
-    return <MovieContext.Provider>
-        {pass}
-    </MovieContext.Provider>
-
-}
+  const value = {
+    favorate,
+    setFavourate,
+  };
+  return <MovieContext.Provider>{pass}</MovieContext.Provider>;
+};
