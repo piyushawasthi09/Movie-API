@@ -20,7 +20,7 @@ A Responsive React app to browse, search, and manage your favorite movies. Built
 - **State Management:** React Context API
 - **Styling:** CSS Modules Styled Components
 - **Icons:** React Icons 
-- **Data Source:** [The Movie Database (TMDB) API](https://www.themoviedb.org/) or any mock API
+- **Data Source:** [The Movie Database (TMDB) API](https://www.themoviedb.org/)
 
 ---
 
